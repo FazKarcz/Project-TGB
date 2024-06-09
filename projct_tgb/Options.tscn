@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyrx1drrn4m4o"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_q2ux6"]
+
+[node name="options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -1.0
+offset_right = 15.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q2ux6")
+metadata/_edit_vertical_guides_ = [572.0]
+
+[node name="CheckButton" type="CheckButton" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 501.0
+offset_top = 258.0
+offset_right = 641.0
+offset_bottom = 289.0
+text = "Pełny ekran"
+
+[node name="back" type="Button" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 529.0
+offset_top = 302.0
+offset_right = 593.0
+offset_bottom = 333.0
+text = "Powrót"
+
+[node name="Background" type="ColorRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 1138.0
+offset_bottom = 655.0
+color = Color(0.89059, 0.89059, 0.89059, 0.254902)
+
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="back" to="." method="_on_button_pressed"]
